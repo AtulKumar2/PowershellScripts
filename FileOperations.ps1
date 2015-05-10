@@ -20,5 +20,5 @@ function convert-filenames-to-propercase
 		$newname = $item.basename.Trim();
 		Rename-Item -Path ($item.fullname) -NewName $newname -WhatIf:$false
 	}
-
 }
+
