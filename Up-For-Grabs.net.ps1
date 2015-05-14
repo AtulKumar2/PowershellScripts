@@ -10,9 +10,6 @@ function Get-ScriptDirectory
 # https://rkeithhill.wordpress.com/2008/05/11/effective-powershell-item-13-comparing-arrays-in-windows-powershell/
 function AreArraysEqual($a1,$a2)
 {
-    #if ($a1 -isnot [array] -or $a2 -isnot [array]) {
-    #  throw "Both inputs must be an array"
-    #}
     if ($a1.Rank -ne $a2.Rank) {
       return $false 
     }
@@ -49,7 +46,7 @@ $script_blocks = $HTML.ParsedHtml.getElementsByTagName("script") | `
 # $source = Get-Content -Path (Join-Path (Get-ScriptDirectory) "Up-For-Grabs.net.htm") -Raw;
 # $HTML.IHTMLDocument2_write($source);
 # $script_blocks = $HTML.getElementsByTagName("script") |  
-					Where{ $_.type -eq ‘text/javascript’ }
+#					Where{ $_.type -eq ‘text/javascript’ }
 # END LOCAL_FILE_SECTION
 
 $file_block = ""
