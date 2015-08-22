@@ -52,7 +52,7 @@ function RestartService([string] $ServiceName)
 	return $true
 }
 
-# Restart a service
+# Stop a service
 function StopService([string] $ServiceName)
 {
     $ServiceRef = Get-Service $ServiceName
@@ -145,7 +145,7 @@ function DeleteService([string] $ServiceName)
 }
 
 
-# New Doagtrack service enables keylogging 2015-05-14
+# New Diagtrack service enables keylogging 2015-05-14
 # http://thepcwhisperer.blogspot.in/2014/10/microsofts-windows-10-preview-has-built.html
 # https://support.microsoft.com/en-us/kb/2976978
 function Delete-DiagTrack()
